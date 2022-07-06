@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Quick</string>
+    <string name="search_edit_hint">Hi,Quick!</string>
+</resources>
