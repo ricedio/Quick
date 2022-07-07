@@ -245,7 +245,7 @@ public class viewInflater {
     private static int idx = 0x7f000000;
 
     private static final String[] ps = new String[]{"paddingLeft", "paddingTop", "paddingRight", "paddingBottom"};
-    private static final String[] ms = new String[]{"layout_marginLeft", "layout_marginTop", "layout_marginRight", "layout_marginBottom"};
+    private static final String[] ms = new String[]{"marginLeft", "marginTop", "marginRight", "marginBottom"};
     private static LuaValue W = CoerceJavaToLua.coerce(ViewGroup.LayoutParams.WRAP_CONTENT);
 
     private final LuaValue mContext;
@@ -550,7 +550,7 @@ public class viewInflater {
                 for (int i = 0; i < ms.length; i++) {
                     LuaValue pt = layout.get(ms[i]);
                     if (pt.isnil())
-                        pt = layout.get("layout_margin");
+                        pt = layout.get("margin");
                     if (pt.isnil()) {
                         pt = view.get(pt);
                     } else {
